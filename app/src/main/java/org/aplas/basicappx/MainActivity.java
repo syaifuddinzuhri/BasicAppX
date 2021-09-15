@@ -114,12 +114,18 @@ public class MainActivity extends AppCompatActivity {
         roundBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                doConvert();
+            }
+        });
+
+        formBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b){
                     imgFormula.setVisibility(View.VISIBLE);
                 } else {
                     imgFormula.setVisibility(View.INVISIBLE);
                 }
-                doConvert();
             }
         });
     }
